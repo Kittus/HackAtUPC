@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 2
   sensibility: 2
-  speed: 6
+  speed: 10
   timeScaleWhenStop: 0.05
   Parent: {fileID: 0}
 --- !u!124 &12454034
@@ -109,7 +109,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114340}
