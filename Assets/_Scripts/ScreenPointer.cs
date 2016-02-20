@@ -17,7 +17,8 @@ public class ScreenPointer : MonoBehaviour {
         RaycastHit hit;
 		int layerMaskVR = 1 << LayerMask.NameToLayer ("VRButton");
         Ray ray = troll.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 10));
-		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+
+		if (Input.GetKeyDown (KeyCode.JoystickButton2)) {	
 			if (Physics.Raycast (ray, out hit, 700f, layerMaskVR)) {
 				Debug.Log (hit.collider.gameObject.name);
 				if (hit.collider.gameObject.name =="Rock It"){

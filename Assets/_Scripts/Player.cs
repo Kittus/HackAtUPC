@@ -34,8 +34,6 @@ public class Player : MonoBehaviour {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        Debug.Log(Time.timeScale);
-
         if (Input.GetKey(KeyCode.Space)) Time.timeScale = 1;
         else if (h == 0 && v == 0) Time.timeScale = timeScaleWhenStop;
         else Time.timeScale = Mathf.Max(Mathf.Abs(h), Mathf.Abs(v));
