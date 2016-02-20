@@ -66,6 +66,8 @@ public class PlayerHealth : MonoBehaviour {
             highScore = finalScore;
             PlayerPrefs.SetInt("High Score", highScore);
         }
+
+
     }
 
 

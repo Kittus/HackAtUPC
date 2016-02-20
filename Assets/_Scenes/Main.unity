@@ -1879,11 +1879,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22424686, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 378
+      value: 329
       objectReference: {fileID: 0}
     - target: {fileID: 22424686, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 715
+      value: 317
       objectReference: {fileID: 0}
     - target: {fileID: 22424686, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1919,11 +1919,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
@@ -3736,7 +3736,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -436, y: 715}
+  m_AnchoredPosition: {x: -367, y: 317}
   m_SizeDelta: {x: 963.8, y: 816.2}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &1557634444
@@ -3759,7 +3759,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4eaa76847deca3e4494207f2b152a7ec, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -3771,7 +3771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Points
+  m_Text: 'Points '
 --- !u!222 &1557634445
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4870,11 +4870,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22428374, guid: cbeaa754942683746a607eee95ff7ddb, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 27550.002
+      value: 27619
       objectReference: {fileID: 0}
     - target: {fileID: 22428374, guid: cbeaa754942683746a607eee95ff7ddb, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 15500
+      value: 15102
       objectReference: {fileID: 0}
     - target: {fileID: 22428374, guid: cbeaa754942683746a607eee95ff7ddb, type: 2}
       propertyPath: m_SizeDelta.x
@@ -5130,7 +5130,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &1943866267
 Prefab:
