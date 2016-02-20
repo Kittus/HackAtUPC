@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fallen
+  - Boundary
+  - GameOverTxt
+  - GameTxt
+  - Canvas
   layers:
   - Default
   - TransparentFX

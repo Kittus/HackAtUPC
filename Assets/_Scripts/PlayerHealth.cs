@@ -63,13 +63,15 @@ public class PlayerHealth : MonoBehaviour {
         PlayerPrefs.SetInt("Last Score", finalScore);
         int highScore = PlayerPrefs.GetInt("High Score");
 
+
         if (finalScore > highScore) //when player dies set highscore = to that score
         {
             highScore = finalScore;
             PlayerPrefs.SetInt("High Score", highScore);
         }
 
-
+        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+        canvas.GetComponent<GameMenuController>().setGameOverUI();
     }
 
 
