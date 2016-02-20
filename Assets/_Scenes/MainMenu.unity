@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cdfdc7ff2d61d4b925f9059226725e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  troll: {fileID: 392935691}
+  collision: {fileID: 1652772098}
 --- !u!23 &1339077284
 MeshRenderer:
   m_ObjectHideFlags: 0
