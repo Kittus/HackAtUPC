@@ -23,7 +23,7 @@ public class PointsController : MonoBehaviour {
 	}
 	void SetCountText ()
 	{
-		countText.text = "Count: " + count.ToString ();
+		countText.text = "Points: " + count.ToString ();
 	
 	}
 }
