@@ -6,6 +6,7 @@ public class ScreenPointer : MonoBehaviour {
 
     public Camera troll;
     public GameObject collision;
+	private Image imageEnabled;
 
 	// Use this for initialization
 	void Start () {
@@ -28,10 +29,13 @@ public class ScreenPointer : MonoBehaviour {
 		}
 
 		if (Physics.Raycast (ray, out hit, 700f, layerMaskVR)) {
-			
-			Text text = hit.collider.gameObject.GetComponent <Text> ();
-			text.color = Color.red;
+			imageEnabled=hit.collider.gameObject.GetComponent <Image> ();
+			imageEnabled.enabled = true;
+		} else if (imageEnabled != null) {
+			imageEnabled.enabled = false;
+			imageEnabled = null;
 		}
+
         int layerMask = 1 << LayerMask.NameToLayer("Screen"); // only check for collisions with layerX
         if (Physics.Raycast(ray,out hit, 700f, layerMask))
         {
