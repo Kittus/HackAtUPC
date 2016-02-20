@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour {
     // Use this for initialization
     void Start () {
         currentHealth = startingHealth;
+        isDead = false;
     }
 	
 
@@ -57,6 +58,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public void Death()
     {
+        isDead = true;
         int finalScore = GameObject.FindGameObjectWithTag("GameController").GetComponent<PointsController>().count;
         PlayerPrefs.SetInt("Last Score", finalScore);
         int highScore = PlayerPrefs.GetInt("High Score");
@@ -66,6 +68,8 @@ public class PlayerHealth : MonoBehaviour {
             highScore = finalScore;
             PlayerPrefs.SetInt("High Score", highScore);
         }
+
+
     }
 
 
