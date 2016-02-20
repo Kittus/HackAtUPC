@@ -30,15 +30,15 @@ public class RockController : MonoBehaviour
 			{
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValuesRocks.x, spawnValuesRocks.x), spawnValuesRocks.y, spawnValuesRocks.z);
 
+				Quaternion spawnRotation = Quaternion.identity;
+				GameObject instantiated = (GameObject) Instantiate (hazardRocks, spawnPosition, spawnRotation);
 				float scale = Random.Range (1.0F, 5.0F);
 
 				hazardRocks.transform.localScale = new Vector3(scale,scale,scale);
 				Rigidbody rb = hazardRocks.GetComponent<Rigidbody>();
 				rb.mass = BaseMass * scale;
 
-				Quaternion spawnRotation = Quaternion.identity;
 
-				GameObject instantiated = (GameObject) Instantiate (hazardRocks, spawnPosition, spawnRotation);
 				instantiated.GetComponentInChildren<Rigidbody> ().velocity = new Vector3 (
 					initialSpeed.x+Random.Range (-1,1)*initialSpeedVariance.x,
 					initialSpeed.y+Random.Range (-1,1)*initialSpeedVariance.y,
