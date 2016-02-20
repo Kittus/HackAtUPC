@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour {
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
+    public float damageDivisor = 20.0f;
+
 
     bool isDead;
     bool damaged;
@@ -24,6 +26,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Update()
     {
+        Debug.Log(currentHealth);
         Fill.color = Color.Lerp(Color.red, Color.green, (float)currentHealth / startingHealth);
 
         if (damaged)
@@ -56,5 +59,14 @@ public class PlayerHealth : MonoBehaviour {
     void Death()
     {
 
+    }
+
+
+    void OnCollisionEnter(Collider col)
+    {
+        if (col.CompareTag("Fallen"))
+        {
+            currentHealth -= (int)((col.GetComponent<Rigidbody>().mass)/ damageDivisor);
+        }
     }
 }
