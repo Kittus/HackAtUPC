@@ -5,7 +5,8 @@ public class playerController : MonoBehaviour {
 
     public float height = 2.0f;
     public float sensibility = 2.0f;
-    public float speed = 3.0f;
+    public float speed = 6.0f;
+
 	// Use this for initialization
 	void Start () {
         transform.Translate(0f, height, 0f);
@@ -40,22 +41,34 @@ public class playerController : MonoBehaviour {
         timePass = false;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(Vector3.forward* Time.deltaTime * speed);
+            Vector3 v = transform.forward;
+            v.y = 0f;
+            v.Normalize();
+            transform.position += v;
             timePass = true;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
+            Vector3 v = transform.forward;
+            v.y = 0f;
+            v.Normalize();
+            transform.position -= v;
             timePass = true;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            Vector3 v = transform.right;
+            v.y = 0f;
+            v.Normalize();
+            transform.position += v;
             timePass = true;
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            Vector3 v = transform.right;
+            v.y = 0f;
+            v.Normalize();
+            transform.position -= v;
             timePass = true;
         }
 
