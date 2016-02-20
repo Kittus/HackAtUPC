@@ -3,12 +3,16 @@ using System.Collections;
 
 public class RockController : MonoBehaviour
 {
-	public GameObject hazard;
-	public Vector3 spawnValues;
+	public GameObject hazardRocks;
+	public GameObject hazardTree;
+
+	public Vector3 spawnValuesRocks;
+	public Vector3 spawnValuesTree;
 	public int hazardCount;
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+	public float waitTreeRock;
 	public int BaseMass;
 	public Vector3 initialSpeed;
 	public Vector3 initialSpeedVariance;
@@ -24,16 +28,17 @@ public class RockController : MonoBehaviour
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
-				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValuesRocks.x, spawnValuesRocks.x), spawnValuesRocks.y, spawnValuesRocks.z);
 
 				float scale = Random.Range (1.0F, 5.0F);
 
-				hazard.transform.localScale = new Vector3(scale,scale,scale);
-				Rigidbody rb = hazard.GetComponent<Rigidbody>();
+				hazardRocks.transform.localScale = new Vector3(scale,scale,scale);
+				Rigidbody rb = hazardRocks.GetComponent<Rigidbody>();
 				rb.mass = BaseMass * scale;
 
 				Quaternion spawnRotation = Quaternion.identity;
-				GameObject instantiated = (GameObject) Instantiate (hazard, spawnPosition, spawnRotation);
+
+				GameObject instantiated = (GameObject) Instantiate (hazardRocks, spawnPosition, spawnRotation);
 				instantiated.GetComponentInChildren<Rigidbody> ().velocity = new Vector3 (
 					initialSpeed.x+Random.Range (-1,1)*initialSpeedVariance.x,
 					initialSpeed.y+Random.Range (-1,1)*initialSpeedVariance.y,
@@ -41,6 +46,12 @@ public class RockController : MonoBehaviour
 				instantiated.GetComponentInChildren<MeshRenderer> ().enabled = false;
 				yield return new WaitForSeconds (spawnWait);
 			}
+			Vector3 spawnPositionTree = new Vector3 (Random.Range (-spawnValuesTree.x, spawnValuesTree.x), spawnValuesTree.y, spawnValuesTree.z);
+			Quaternion spawnRotationTree = Quaternion.AngleAxis (90.0F, Vector3.forward );
+
+			yield return new WaitForSeconds (waitTreeRock);
+
+			Instantiate (hazardTree, spawnPositionTree, spawnRotationTree);
 			yield return new WaitForSeconds (waveWait);
 		}
 	}
