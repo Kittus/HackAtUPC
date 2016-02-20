@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class PointsController : MonoBehaviour {
-	private int count;
+	public int count;
 	public Text countText;
 	private float dtime;
 	// Use this for initialization
@@ -24,6 +24,6 @@ public class PointsController : MonoBehaviour {
 	void SetCountText ()
 	{
 		countText.text = "Points: " + count.ToString ();
-	
+	    
 	}
 }

@@ -14,7 +14,7 @@ GameObject:
   - 54: {fileID: 5456104}
   m_Layer: 0
   m_Name: Rolling Tree
-  m_TagString: Untagged
+  m_TagString: Fallen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Fallen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -55,18 +55,27 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-    void Death()
+    public void Death()
     {
+        int finalScore = GameObject.FindGameObjectWithTag("GameController").GetComponent<PointsController>().count;
+        PlayerPrefs.SetInt("Last Score", finalScore);
+        int highScore = PlayerPrefs.GetInt("High Score");
 
+        if (finalScore > highScore) //when player dies set highscore = to that score
+        {
+            highScore = finalScore;
+            PlayerPrefs.SetInt("High Score", highScore);
+        }
     }
 
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("Fallen"))
-        {
-            TakeDamage((int)((col.collider.GetComponent<Rigidbody>().mass)/ damageDivisor));
-        }
-        Debug.Log(currentHealth);
+            if (col.collider.CompareTag("Fallen"))
+            {
+                TakeDamage((int)((col.collider.GetComponent<Rigidbody>().mass) / damageDivisor));
+            }
+            Debug.Log(currentHealth);
+        
     }
 }
