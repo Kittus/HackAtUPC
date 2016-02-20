@@ -881,7 +881,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Arnau, Laia \xCD\xF1igo and Marc\nHACKUPC 2016"
+  m_Text: "Arnau, Laia, \xCD\xF1igo and Marc\nHACKUPC 2016"
 --- !u!222 &580384504
 CanvasRenderer:
   m_ObjectHideFlags: 0
