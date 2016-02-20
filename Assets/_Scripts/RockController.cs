@@ -12,6 +12,7 @@ public class RockController : MonoBehaviour
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+	public float waitTreeRock;
 	public int BaseMass;
 	void Start ()
 	{
@@ -39,6 +40,9 @@ public class RockController : MonoBehaviour
 			}
 			Vector3 spawnPositionTree = new Vector3 (Random.Range (-spawnValuesTree.x, spawnValuesTree.x), spawnValuesTree.y, spawnValuesTree.z);
 			Quaternion spawnRotationTree = Quaternion.AngleAxis (90.0F, Vector3.forward );
+
+			yield return new WaitForSeconds (waitTreeRock);
+
 			Instantiate (hazardTree, spawnPositionTree, spawnRotationTree);
 			yield return new WaitForSeconds (waveWait);
 		}
