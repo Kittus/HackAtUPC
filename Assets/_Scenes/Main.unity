@@ -1631,7 +1631,7 @@ GameObject:
   - 114: {fileID: 619970647}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1682,6 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649d308ffcb8cf547ba47fab1726899f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 0
   countText: {fileID: 1557634444}
 --- !u!1001 &620422488
 Prefab:
@@ -1918,11 +1919,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
@@ -2148,8 +2149,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 797717361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 95, z: 169.4}
-  m_LocalScale: {x: 100, y: 190, z: 450}
+  m_LocalPosition: {x: 1, y: 61, z: 169.4}
+  m_LocalScale: {x: 320.4, y: 273.7, z: 590.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2275,6 +2276,7 @@ GameObject:
   - 33: {fileID: 834648284}
   - 64: {fileID: 834648283}
   - 23: {fileID: 834648282}
+  - 114: {fileID: 834648286}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -2315,10 +2317,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834648281}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &834648284
 MeshFilter:
@@ -2334,11 +2336,22 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834648281}
   m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -56, z: 0}
   m_LocalScale: {x: 1000, y: 1000, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &834648286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834648281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f13b225b0aad14aa53f0782974c833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &856436520 stripped
 Transform:
   m_PrefabParentObject: {fileID: 454958, guid: ed0bb4463c8aa6d44a538350ac8dbce4, type: 2}
@@ -5053,7 +5066,7 @@ GameObject:
   - 54: {fileID: 1941535583}
   m_Layer: 0
   m_Name: CameraContainer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5117,7 +5130,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1001 &1943866267
 Prefab:

@@ -5,8 +5,10 @@ public class DestroyByBoundary : MonoBehaviour {
 
 	void OnTriggerExit(Collider other)
 	{
-		if (other.tag == "Fallen") {
-			Destroy (other.gameObject);
-		}
+        if (other.tag == "Fallen")
+        {
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Player")) other.gameObject.GetComponent<PlayerHealth>().Death();
 	}
 }
