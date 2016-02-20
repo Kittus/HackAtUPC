@@ -10,6 +10,8 @@ public class RockController : MonoBehaviour
 	public float startWait;
 	public float waveWait;
 	public int BaseMass;
+	public Vector3 initialSpeed;
+	public Vector3 initialSpeedVariance;
 	void Start ()
 	{
 		StartCoroutine (SpawnWaves ());
@@ -31,7 +33,12 @@ public class RockController : MonoBehaviour
 				rb.mass = BaseMass * scale;
 
 				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate (hazard, spawnPosition, spawnRotation);
+				GameObject instantiated = (GameObject) Instantiate (hazard, spawnPosition, spawnRotation);
+				instantiated.GetComponentInChildren<Rigidbody> ().velocity = new Vector3 (
+					initialSpeed.x+Random.Range (-1,1)*initialSpeedVariance.x,
+					initialSpeed.y+Random.Range (-1,1)*initialSpeedVariance.y,
+					initialSpeed.z+Random.Range (-1,1)*initialSpeedVariance.z);
+				instantiated.GetComponentInChildren<MeshRenderer> ().enabled = false;
 				yield return new WaitForSeconds (spawnWait);
 			}
 			yield return new WaitForSeconds (waveWait);
