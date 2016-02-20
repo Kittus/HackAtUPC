@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ScreenPointer : MonoBehaviour {
@@ -14,15 +15,21 @@ public class ScreenPointer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         RaycastHit hit;
+		int layerMaskVR = 1 << LayerMask.NameToLayer ("VRButton");
         Ray ray = troll.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 10));
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
-			int layerMaskVR = 1 << LayerMask.NameToLayer ("VRButton");
 			if (Physics.Raycast (ray, out hit, 700f, layerMaskVR)) {
 				Debug.Log (hit.collider.gameObject.name);
 				if (hit.collider.gameObject.name =="Rock It"){
 					LoadOnClick.LoadScene(1);
 				}
 			}
+		}
+
+		if (Physics.Raycast (ray, out hit, 700f, layerMaskVR)) {
+			
+			Text text = hit.collider.gameObject.GetComponent <Text> ();
+			text.color = Color.red;
 		}
         int layerMask = 1 << LayerMask.NameToLayer("Screen"); // only check for collisions with layerX
         if (Physics.Raycast(ray,out hit, 700f, layerMask))
