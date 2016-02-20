@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     public float height = 2.0f;
     public float sensibility = 2.0f;
-    public float speed = 10.0f;
+    public float speed = 6.0f;
     public float timeScaleWhenStop = 0.05f;
 
     public GameObject Parent;
@@ -27,27 +27,41 @@ public class PlayerController : MonoBehaviour {
         transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
     }
 
-
-    private float walkingIndex = 0f; //extra "y" for walking animation
     void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        Time.timeScale = timeScaleWhenStop;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            Time.timeScale = 1;
+            Vector3 v = transform.forward;
+            v.y = 0f;
+            v.Normalize();
+            Parent.transform.position += v;
+        }
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            Time.timeScale = 1;
+            Vector3 v = transform.forward;
+            v.y = 0f;
+            v.Normalize();
+            Parent.transform.position -= v;
+        }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            Time.timeScale = 1;
+            Vector3 v = transform.right;
+            v.y = 0f;
+            v.Normalize();
+            Parent.transform.position += v;
+        }
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            Time.timeScale = 1;
+            Vector3 v = transform.right;
+            v.y = 0f;
+            v.Normalize();
+            Parent.transform.position -= v;
+        }
 
-        Debug.Log(Time.timeScale);
-
-        if (Input.GetKey(KeyCode.Space)) Time.timeScale = 1;
-        else if (h == 0 && v == 0) Time.timeScale = timeScaleWhenStop;
-        else Time.timeScale = Mathf.Max(Mathf.Abs(h), Mathf.Abs(v));
-
-        Vector3 v1 = transform.forward*v;
-        v1 = transform.right*h + v1;
-       
-        v1.y = 0f;
-        v1.Normalize();
-        Parent.transform.position += v1*speed * Time.deltaTime;
-       
-        if (Time.timeScale < 1) walkingIndex = 0;
-        else walkingIndex += 0.4f;
     }
 }
