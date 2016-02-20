@@ -4902,6 +4902,7 @@ GameObject:
   - 4: {fileID: 1941535580}
   - 136: {fileID: 1941535581}
   - 114: {fileID: 1941535582}
+  - 114: {fileID: 1941535583}
   m_Layer: 0
   m_Name: CameraContainer
   m_TagString: Untagged
@@ -4955,6 +4956,18 @@ MonoBehaviour:
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
   damageDivisor: 20
+--- !u!114 &1941535583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1941535579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c20ec5acc71f244db877952892ac566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1001 &1943866267
 Prefab:
   m_ObjectHideFlags: 0
