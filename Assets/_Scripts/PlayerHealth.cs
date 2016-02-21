@@ -82,8 +82,6 @@ public class PlayerHealth : MonoBehaviour {
             if (col.collider.CompareTag("Fallen"))
             {
                 TakeDamage((int)((col.collider.GetComponent<Rigidbody>().mass) / damageDivisor));
-            }
-            Debug.Log(currentHealth);
-        
+            }        
     }
 }

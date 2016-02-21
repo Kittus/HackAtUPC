@@ -3132,7 +3132,7 @@ Transform:
   m_GameObject: {fileID: 632949434}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 11.1, y: 7.6, z: 64}
-  m_LocalScale: {x: 12.55, y: 120.69, z: 127.7}
+  m_LocalScale: {x: 19.1, y: 28.56, z: 128.09}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -8079,7 +8079,7 @@ GameObject:
   - 114: {fileID: 1941535582}
   - 54: {fileID: 1941535583}
   - 114: {fileID: 1941535584}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraContainer
   m_TagString: Player
   m_Icon: {fileID: 0}
