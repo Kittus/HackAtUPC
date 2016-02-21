@@ -7,13 +7,15 @@ public class Player : MonoBehaviour {
     public float sensibility = 2.0f;
     public float speed = 10.0f;
     public float timeScaleWhenStop = 0.05f;
-
+    public float timeScaleMusic = 0.1f;
     public GameObject Parent;
 
+    private AudioSource audio;
 	// Use this for initialization
 	void Start () {
         Parent.transform.Translate(0f, height, 0f);
         Cursor.visible = false;
+        audio = GetComponent<AudioSource>();
     }
     
     private float yaw = 0.0f;
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour {
     }
 
 
-    private float walkingIndex = 0f; //extra "y" for walking animation
+    //private float walkingIndex = 0f; //extra "y" for walking animation
     void FixedUpdate()
     {
         float h = Input.GetAxisRaw("Horizontal");
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour {
         v1.Normalize();
         Parent.transform.position += v1*speed * Time.deltaTime;
        
-        if (Time.timeScale < 1) walkingIndex = 0;
-        else walkingIndex += 0.4f;
+        if (Time.timeScale < 1) audio.pitch = timeScaleMusic;
+        else audio.pitch = 1;
     }
 }
