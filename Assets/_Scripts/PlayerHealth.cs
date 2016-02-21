@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour {
     public Slider healthSlider;
     public Image Fill;
     public Image damageImage;
-    public float flashSpeed = 5f;
+    public float flashSpeed = 1f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
     public float damageDivisor = 20.0f;
