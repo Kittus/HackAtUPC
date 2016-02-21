@@ -47,9 +47,13 @@ public class Player : MonoBehaviour {
         v1.y = 0f;
         v1.Normalize();
         Parent.transform.position += v1*speed * Time.deltaTime;
-       
-        if (Time.timeScale < 1) audio.pitch = timeScaleMusic;
-        else audio.pitch = 1;
+
+            if (Time.timeScale < 1)
+            {
+                audio.pitch = timeScaleMusic;
+
+            }
+            else audio.pitch = 1;
 		}
 	}
 }
