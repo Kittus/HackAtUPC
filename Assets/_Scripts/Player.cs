@@ -33,6 +33,7 @@ public class Player : MonoBehaviour {
     //private float walkingIndex = 0f; //extra "y" for walking animation
     void FixedUpdate()
     {
+		if (!Parent.GetComponent<PlayerHealth>().isDead) {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
@@ -49,5 +50,6 @@ public class Player : MonoBehaviour {
        
         if (Time.timeScale < 1) audio.pitch = timeScaleMusic;
         else audio.pitch = 1;
-    }
+		}
+	}
 }
