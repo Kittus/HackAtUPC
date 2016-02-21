@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 public class PlayerHealth : MonoBehaviour {
-
+	public Camera cam;
     public int startingHealth = 100;
     public int currentHealth;
     public Slider healthSlider;
@@ -32,10 +33,13 @@ public class PlayerHealth : MonoBehaviour {
 
         if (damaged)
         {
+			
+			cam.GetComponent<ScreenOverlay> ().intensity = 3;
             damageImage.color = flashColour;
         }
         else
-        {
+		{
+			//cam.GetComponent<ScreenOverlay> ().intensity = Mathf.Lerp(cam.GetComponent<ScreenOverlay> ().intensity,0,flashSpeed * Time.deltaTime);
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
