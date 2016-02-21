@@ -58,20 +58,22 @@ public class PlayerHealth : MonoBehaviour {
 
     public void Death()
     {
-        isDead = true;
-        int finalScore = GameObject.FindGameObjectWithTag("GameController").GetComponent<PointsController>().count;
-        PlayerPrefs.SetInt("Last Score", finalScore);
-        int highScore = PlayerPrefs.GetInt("High Score");
+		if (!isDead) {
+			Debug.Log ("Death()");
+			isDead = true;
+			int finalScore = GameObject.FindGameObjectWithTag ("GameController").GetComponent<PointsController> ().count;
+			PlayerPrefs.SetInt ("Last Score", finalScore);
+			int highScore = PlayerPrefs.GetInt ("High Score");
 
 
-        if (finalScore > highScore) //when player dies set highscore = to that score
-        {
-            highScore = finalScore;
-            PlayerPrefs.SetInt("High Score", highScore);
-        }
+			if (finalScore > highScore) { //when player dies set highscore = to that score
+				highScore = finalScore;
+				PlayerPrefs.SetInt ("High Score", highScore);
+			}
 
-        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
-        canvas.GetComponent<GameMenuController>().setGameOverUI();
+			GameObject canvas = GameObject.FindGameObjectWithTag ("Canvas");
+			canvas.GetComponent<GameMenuController> ().setGameOverUI ();
+		}
     }
 
 

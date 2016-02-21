@@ -14,16 +14,10 @@ public class GameMenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
     }
 
     public void setGameOverUI()
     {
         gameOverTxt.SetActive(true);
-
-        // Wait for X too be pressed
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2)){
-            LoadOnClick.LoadScene(0);
-        }
     }
 }
