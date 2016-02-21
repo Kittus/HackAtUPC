@@ -46,7 +46,7 @@ public class RockController : MonoBehaviour
 					initialSpeed.x+Random.Range (-1,1)*initialSpeedVariance.x,
 					initialSpeed.y+Random.Range (-1,1)*initialSpeedVariance.y,
 					initialSpeed.z+Random.Range (-1,1)*initialSpeedVariance.z);
-				instantiated.GetComponentInChildren<MeshRenderer> ().enabled = false;
+				//instantiated.GetComponentInChildren<MeshRenderer> ().enabled = false;
 				yield return new WaitForSeconds (spawnWait);
 			}
 			Vector3 spawnPositionTree = new Vector3 (Random.Range (-spawnValuesTree.x, spawnValuesTree.x), spawnValuesTree.y, spawnValuesTree.z);
