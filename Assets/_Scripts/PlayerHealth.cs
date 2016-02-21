@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public float damageDivisor = 20.0f;
 
+  
 
     public bool isDead;
     bool damaged;
@@ -57,7 +58,7 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     public void Death()
-    {
+    { 
 		if (!isDead) {
 			Debug.Log ("Death()");
 			isDead = true;
@@ -71,8 +72,10 @@ public class PlayerHealth : MonoBehaviour {
 				PlayerPrefs.SetInt ("High Score", highScore);
 			}
 
+            GameObject.Find("CameraContainer").GetComponent<PointsController>().StopCounting();
+
 			GameObject canvas = GameObject.FindGameObjectWithTag ("Canvas");
-			canvas.GetComponent<GameMenuController> ().setGameOverUI ();
+            canvas.GetComponent<GameMenuController>().setGameOverUI();
 		}
     }
 
