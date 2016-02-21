@@ -3120,7 +3120,7 @@ Transform:
   m_GameObject: {fileID: 632949434}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 11.1, y: 7.6, z: 64}
-  m_LocalScale: {x: -4.16, y: 28.56, z: 127.7}
+  m_LocalScale: {x: 12.55, y: 120.69, z: 127.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -3470,6 +3470,7 @@ Prefab:
     - target: {fileID: 5451278, guid: 58cf9d4390b452a45b71f088beef0177, type: 2}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4339,7 +4340,7 @@ Transform:
   m_GameObject: {fileID: 936180198}
   m_LocalRotation: {x: 0, y: 0.046234746, z: 0, w: 0.99893063}
   m_LocalPosition: {x: 40.4, y: 4.8, z: 2.8}
-  m_LocalScale: {x: -4.16, y: 28.56, z: 127.7}
+  m_LocalScale: {x: 9.3, y: 94.72, z: 127.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -4804,7 +4805,7 @@ Transform:
   m_GameObject: {fileID: 1098506401}
   m_LocalRotation: {x: 0, y: -0.046234746, z: 0, w: 0.99893063}
   m_LocalPosition: {x: -38.2, y: 4.8, z: 3}
-  m_LocalScale: {x: -4.16, y: 28.56, z: 127.7}
+  m_LocalScale: {x: 11.9, y: 94.63, z: 127.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -5348,9 +5349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'X: Retry
-
-    O: Main Menu'
+  m_Text: Press X
 --- !u!222 &1248164299
 CanvasRenderer:
   m_ObjectHideFlags: 0
