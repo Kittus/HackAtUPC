@@ -3463,6 +3463,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 439308, guid: 58cf9d4390b452a45b71f088beef0177, type: 2}
       propertyPath: m_LocalScale.z
       value: 3
@@ -3470,6 +3471,15 @@ Prefab:
     - target: {fileID: 5451278, guid: 58cf9d4390b452a45b71f088beef0177, type: 2}
       propertyPath: m_Constraints
       value: 126
+=======
+    - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+>>>>>>> fb61aff222c1f454a6e37bc6d04b6e10fb4c1db2
       objectReference: {fileID: 0}
     - target: {fileID: 185290, guid: 58cf9d4390b452a45b71f088beef0177, type: 2}
       propertyPath: m_TagString
@@ -8060,7 +8070,12 @@ GameObject:
   - 136: {fileID: 1941535581}
   - 114: {fileID: 1941535582}
   - 54: {fileID: 1941535583}
+<<<<<<< HEAD
   m_Layer: 11
+=======
+  - 114: {fileID: 1941535584}
+  m_Layer: 0
+>>>>>>> fb61aff222c1f454a6e37bc6d04b6e10fb4c1db2
   m_Name: CameraContainer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8128,6 +8143,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1941535584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1941535579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c20ec5acc71f244db877952892ac566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1001 &1943866267
 Prefab:
   m_ObjectHideFlags: 0
