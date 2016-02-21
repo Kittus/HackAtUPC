@@ -1564,8 +1564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c3fea9c0d90c44e898116bcac6a664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  high: {fileID: 718340384}
-  last: {fileID: 2074655042}
+  high: {fileID: 2074655042}
+  last: {fileID: 718340384}
 --- !u!1 &1610839536
 GameObject:
   m_ObjectHideFlags: 0
