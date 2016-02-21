@@ -17,14 +17,4 @@ public class LoadStoreScore : MonoBehaviour {
 
 	}
 
-	void GameOver (int finalScore){
-		PlayerPrefs.SetInt ("Last Score", finalScore);
-		if(finalScore > highScore) //when player dies set highscore = to that score
-		{
-			highScore = finalScore;
-			PlayerPrefs.SetInt("High Score", highScore);
-
-
-		} 
-	}
 }

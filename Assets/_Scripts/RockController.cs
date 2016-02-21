@@ -34,11 +34,12 @@ public class RockController : MonoBehaviour
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValuesRocks.x, spawnValuesRocks.x), spawnValuesRocks.y, spawnValuesRocks.z);
 
 				Quaternion spawnRotation = Quaternion.identity;
+
 				GameObject instantiated = (GameObject) Instantiate (hazardRocks, spawnPosition, spawnRotation);
 				float scale = Random.Range (1.0F, maxSize);
 
-				hazardRocks.transform.localScale = new Vector3(scale,scale,scale);
-				Rigidbody rb = hazardRocks.GetComponent<Rigidbody>();
+				instantiated.transform.localScale = new Vector3(scale,scale,scale);
+				Rigidbody rb = instantiated.GetComponent<Rigidbody>();
 				rb.mass = BaseMass * scale;
 
 
@@ -52,9 +53,9 @@ public class RockController : MonoBehaviour
 			Vector3 spawnPositionTree = new Vector3 (Random.Range (-spawnValuesTree.x, spawnValuesTree.x), spawnValuesTree.y, spawnValuesTree.z);
 			Quaternion spawnRotationTree = Quaternion.AngleAxis (90.0F, Vector3.forward );
 
+			Instantiate (hazardTree, spawnPositionTree, spawnRotationTree);
 			yield return new WaitForSeconds (waitTreeRock);
 
-			Instantiate (hazardTree, spawnPositionTree, spawnRotationTree);
 			yield return new WaitForSeconds (waveWait);
 			waveCount++;
 			maxSize = maxSize * (1 + waveCount / 100);
