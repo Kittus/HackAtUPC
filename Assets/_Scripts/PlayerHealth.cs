@@ -33,7 +33,6 @@ public class PlayerHealth : MonoBehaviour {
 
         if (damaged)
         {
-			Debug.Log ("HOLA");
 			cam.GetComponent<ScreenOverlay> ().intensity = 5;
             damageImage.color = flashColour;
         }
