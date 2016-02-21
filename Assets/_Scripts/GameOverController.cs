@@ -10,7 +10,6 @@ public class GameOverController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("aa");
 		if (Input.GetKeyDown(KeyCode.Joystick1Button2)){
 			LoadOnClick.LoadScene(0);
 		}
