@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
     public float sensibility = 2.0f;
     public float speed = 10.0f;
     public float timeScaleWhenStop = 0.05f;
-    public float timeScaleMusic = 0.1f;
+    public float timeScaleMusic = 0.5f;
     public GameObject Parent;
 
     private AudioSource audio;
