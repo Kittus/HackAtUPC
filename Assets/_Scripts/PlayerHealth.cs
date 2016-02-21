@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour {
     public float damageDivisor = 20.0f;
 
 
-    bool isDead;
+    public bool isDead;
     bool damaged;
 
     // Use this for initialization
