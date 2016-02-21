@@ -3395,11 +3395,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22419368, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 197070, guid: 30147f0200c3ce84189af5874ec47b36, type: 2}
       propertyPath: m_TagString

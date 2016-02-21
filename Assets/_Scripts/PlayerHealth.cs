@@ -72,7 +72,7 @@ public class PlayerHealth : MonoBehaviour {
 				PlayerPrefs.SetInt ("High Score", highScore);
 			}
 
-            GameObject.Find("CameraContainer").GetComponent<PointsController>().StopCounting();
+            GameObject.Find("Controller").GetComponent<PointsController>().StopCounting();
 
 			GameObject canvas = GameObject.FindGameObjectWithTag ("Canvas");
             canvas.GetComponent<GameMenuController>().setGameOverUI();
