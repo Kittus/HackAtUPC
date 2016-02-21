@@ -33,13 +33,13 @@ public class PlayerHealth : MonoBehaviour {
 
         if (damaged)
         {
-			
-			cam.GetComponent<ScreenOverlay> ().intensity = 3;
+			Debug.Log ("HOLA");
+			cam.GetComponent<ScreenOverlay> ().intensity = 5;
             damageImage.color = flashColour;
         }
         else
 		{
-			//cam.GetComponent<ScreenOverlay> ().intensity = Mathf.Lerp(cam.GetComponent<ScreenOverlay> ().intensity,0,flashSpeed * Time.deltaTime);
+			cam.GetComponent<ScreenOverlay> ().intensity = Mathf.Lerp(cam.GetComponent<ScreenOverlay> ().intensity,0,flashSpeed * Time.deltaTime);
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
